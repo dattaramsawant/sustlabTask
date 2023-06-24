@@ -64,12 +64,21 @@
                 .hourTag{
                     width: 30px;
                 }
+
+                .hour{
+                    width: 15px;
+                    height: 15px;
+                }
             }
             .dateRow{
                 font-size: $FONT_SIZE_12;
 
                 .date{
                     width: 30px;
+                }
+                .box{
+                    width: 15px;
+                    height: 15px;
                 }
             }
         }
