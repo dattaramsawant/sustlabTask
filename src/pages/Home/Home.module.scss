@@ -1,0 +1,77 @@
+@import '../../utils/variables';
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+
+    .matrixBox {
+        overflow: auto;
+        display: grid;
+        gap: 5px;
+        grid-auto-rows: min-content;
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+
+        .hoursRow {
+            display: grid;
+            align-items: center;
+            gap: 2px;
+            grid-template-columns: repeat(25, min-content);
+            font-size: $FONT_SIZE_14;
+
+            .hourTag {
+                margin: 0;
+                width: 50px;
+            }
+
+            .hour {
+                width: 20px;
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .dateRow {
+            display: grid;
+            grid-template-columns: repeat(25, min-content);
+            align-items: center;
+            gap: 2px;
+
+            .date {
+                margin: 0;
+                font-size: $FONT_SIZE_14;
+                width: 50px;
+            }
+
+            .box {
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                background-color: #e0e0e0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        .matrixBox{
+            .hoursRow{
+                font-size: $FONT_SIZE_12;
+
+                .hourTag{
+                    width: 30px;
+                }
+            }
+            .dateRow{
+                font-size: $FONT_SIZE_12;
+
+                .date{
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
